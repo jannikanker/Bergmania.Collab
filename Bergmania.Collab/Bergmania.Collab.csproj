@@ -296,6 +296,7 @@
   <ItemGroup>
     <Compile Include="Collab\CollabHub.cs" />
     <Compile Include="Collab\ICollabHubClient.cs" />
+    <Compile Include="Collab\ContentEditorInfo.cs" />
     <Compile Include="Collab\RouteInfo.cs" />
     <Compile Include="Collab\UserRouteInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

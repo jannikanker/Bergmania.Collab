@@ -6,10 +6,12 @@
 
         var initialized = false;
         var lock = false;
-        instance.userInfo = [];
-        $.connection.collabHub.client.updateOnlineUsers = function (userInfo) {
-            instance.userInfo = userInfo;
-            eventsService.emit("collab.userInfoUpdated", userInfo);
+		instance.userInfo = [];
+		instance.contentEditorInfo = [];
+        $.connection.collabHub.client.updateOnlineUsers = function (userInfo, contentEditorInfo) {
+			instance.userInfo = userInfo;
+			instance.contentEditorInfo = contentEditorInfo;
+            eventsService.emit("collab.userInfoUpdated", userInfo, contentEditorInfo);
         };
 
 

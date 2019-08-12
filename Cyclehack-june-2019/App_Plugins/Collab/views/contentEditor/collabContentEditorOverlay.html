@@ -1,0 +1,23 @@
+﻿<div style="display: none; visibility: hidden" id="collabOverlay" ng-controller="Collab.contentEditorController as vm">
+
+    <div class="centered">
+        <strong>Sorry brah, 'nother dude is editing RN (no killin'!)</strong>
+        <div>
+            <span ng-repeat="user in vm.userInfo | filter:{email: '!' + vm.currentUser.email}">
+                <umb-avatar size="xs"
+                            color="secondary"
+                            name="{{user.name}}"
+                            img-src="{{user.avatars[0]}}"
+                            img-srcset="{{user.avatars[1]}} 2x, {{user.avatars[2]}} 3x">
+                </umb-avatar>
+            </span>
+        </div>
+        <!--<ul>
+            <li ng-repeat="editor in vm.userInfo | filter:{email: '!' + vm.currentUser.email}">
+                {{editor.email}}
+            </li>
+        </ul>-->
+        <!--<pre>{{vm.currentUser | json}}</pre>-->
+    </div>
+
+</div>

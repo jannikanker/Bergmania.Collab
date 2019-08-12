@@ -10,6 +10,6 @@ namespace Bergmania.Collab.Collab
         //   this is because we want to custom-serialize them, and you cannot tell signalR
         //   how to do it, so have to do it outside of signalR and send JSON
         
-        void UpdateOnlineUsers(IEnumerable<UserRouteInfo> userInfo);
+        void UpdateOnlineUsers(IEnumerable<UserRouteInfo> userInfo, IEnumerable<ContentEditorInfo> contentEditorInfo);
     }
 }
